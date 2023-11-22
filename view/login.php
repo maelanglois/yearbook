@@ -1,6 +1,3 @@
-<?php
-require 'layout.php';
-?>
 
 <div class="container">
     <div class="login-card">
