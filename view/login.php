@@ -1,10 +1,16 @@
-<div>
-    <h3>Sign in</h3>
-    <form method="post">
-        <label for="email" >Email</label>
-        <input type="email" name="email" ><br>
-        <label for="password">Password</label>
-        <input type="password" name="password"><br>
-        <input type="submit" value="valider" />
-    </form>
+<?php
+require 'layout.php';
+?>
+
+<div class="container">
+    <div class="login-card">
+        <div class="login-title">Login</div>
+        <form method="post" class="login-display">
+            <div class="login-int-display"><label for="email" class="login-label">Email</label>
+            <input type="email" name="email" class="login-input"></div>
+            <div class="login-int-display"><label for="password" class="login-label">Password</label>
+            <input type="password" name="password" class="login-input"></div>
+            <input type="submit" value="valider" class="login-submit" />
+        </form>
+    </div>
 </div>

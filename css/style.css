@@ -1,11 +1,21 @@
 body{
     font-family: 'Inter', sans-serif;
     padding: none;
-    color: #454545;
+    color: var(--text);
 }
 
+:root{
+    --text: #454545;
+    --vert : #6ccc9a;
+    --card-bg : #F4F4F4;
+    --grey : #d6d6d6;
+    --white : white;
+}
+
+/* homepage */
+
 .container{
-    width: 100%;
+    width: 80%;
     margin: auto;
 }
 
@@ -21,7 +31,7 @@ body{
 }
 
 .homepage-year-contain{
-    background-color: #F4F4F4;
+    background-color: var(--card-bg);
     border-radius: 15px;
 }
 
@@ -52,6 +62,8 @@ body{
     margin: 10px;
 }
 
+/* navbar */
+
 .nav{
     text-transform: uppercase;
     display: flex;
@@ -61,7 +73,7 @@ body{
     padding: 20px;
     height: auto;
     background-color: none;
-    border-bottom: 1px solid #d6d6d6;
+    border-bottom: 1px solid var(--grey);
 }
 
 .nav-link{
@@ -71,6 +83,66 @@ body{
 }
 
 .nav-link:hover{
-    color: #5fd980;
+    color: var(--vert);
+    transition: 0.3s;
+}
+
+/* login */
+
+.login-card{
+    margin: 50px auto;
+    padding: 20px;
+    width: 70%;
+    border-radius: 3px;
+    background-color: var(--card-bg);
+}
+
+.login-display{
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-int-display{
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.login-title{
+    margin: 20px auto;
+    text-align: center;
+    line-height: 1.8em;
+    font-size: 1.5em;
+    color: var(--text);
+    border-bottom: 1px solid var(--text)
+}
+
+.login-label{
+    font-size: 0.8em;
+    color: var(--text);
+}
+
+.login-submit{
+    width: 25%;
+    text-align: center;
+    border: 1px solid var(--vert);
+    border-radius: 3px;
+    color: var(--vert);
+    padding: 10px;
+    background: none;
+    transition: 0.3s;
+}
+
+.login-input{
+    background: none;
+    padding: 5px;
+    border: 1px solid var(--text);
+    border-radius: 3px;
+    margin: 3px 0px;
+}
+
+.login-submit:hover{
+    background-color: var(--vert);
+    color: var(--white);
     transition: 0.3s;
 }
