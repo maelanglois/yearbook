@@ -1,0 +1,76 @@
+body{
+    font-family: 'Inter', sans-serif;
+    padding: none;
+    color: #454545;
+}
+
+.container{
+    width: 100%;
+    margin: auto;
+}
+
+.homepage-year-display{
+    margin: 40px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    width: 80%;
+    height: auto;
+    padding: 20px;
+}
+
+.homepage-year-contain{
+    background-color: #F4F4F4;
+    border-radius: 15px;
+}
+
+.homepage-grayscale{
+    color: black;
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+
+.homepage-grayscale:hover{
+    filter: grayscale(0);
+    transition: 0.5s;
+}
+
+.homepage-year-img{
+    border-radius: 15px 15px 0px 0px;
+    width: 300px;
+}
+
+.homepage-year-title{
+    margin: 10px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.homepage-year-number{
+    font-size: 0.5em;
+    margin: 10px;
+}
+
+.nav{
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    height: auto;
+    background-color: none;
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.nav-link{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+}
+
+.nav-link:hover{
+    color: #5fd980;
+    transition: 0.3s;
+}
