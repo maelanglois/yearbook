@@ -1,5 +1,5 @@
 <?php
-require 'layout.php';
+//require 'layout.php';
 ?>
 
 <!DOCTYPE html>
@@ -13,12 +13,12 @@ require 'layout.php';
     <div class="container">
         <div class="homepage-year-display">
             <div class="homepage-year-contain">
-                <div class="homepage-grayscale"><img src="../images/01.jpg" class="homepage-year-img"></div>
+                <div class="homepage-grayscale"><img src="images/01.jpg" class="homepage-year-img"></div>
                 <div class="homepage-year-title">année 2022 - 2023</div>
                 <div class="homepage-year-number">XX étudiants</div>
             </div>
             <div class="homepage-year-contain">
-                <div class="homepage-grayscale"><img src="../images/01.jpg" class="homepage-year-img"></div>
+                <div class="homepage-grayscale"><img src="images/01.jpg" class="homepage-year-img"></div>
                 <div class="homepage-year-title">année 2022 - 2023</div>
                 <div class="homepage-year-number">XX étudiants</div>
             </div>

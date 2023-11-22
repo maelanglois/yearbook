@@ -1,5 +1,6 @@
 <?php 
 require './root/connection.php';
+require dirname(__DIR__) . '/view/register.php';
 
 if(isset($_POST["title"]) && isset($_POST["text"]) && isset($_POST["date"]) && isset($_FILES['avatar']) && $_FILES['avatar']['error'] === 0 && $_FILES['avatar']['size'] <= 200000 && $_FILES['avatar']['type'] === 'avatar/png')
 {

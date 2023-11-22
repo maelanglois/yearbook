@@ -1,6 +1,7 @@
 <?php
 
 require './root/connection.php';
+require dirname(__DIR__) . '/view/login.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
