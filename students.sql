@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mer. 22 nov. 2023 à 10:18
+-- Généré le : mer. 22 nov. 2023 à 10:37
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.1.13
 
@@ -30,14 +30,21 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `students`;
 CREATE TABLE IF NOT EXISTS `students` (
   `id` int NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `firstname` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(16) NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `firstname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
   `birthday` date NOT NULL,
-  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `promotion` varchar(16) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `promotion` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Déchargement des données de la table `students`
+--
+
+INSERT INTO `students` (`id`, `name`, `firstname`, `email`, `password`, `birthday`, `avatar`, `promotion`) VALUES
+(1, 'test-name', 'test-firstname', 'test@test.com', 'test-password', '2000-01-01', '', 'test-promo');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
