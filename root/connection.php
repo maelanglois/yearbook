@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 # CONNECTION BASE DE DONNÉE MAC
 $bdd = new PDO('mysql:host=localhost;dbname=yearbook;charset=utf8;port:8889','root', 'root');
 
