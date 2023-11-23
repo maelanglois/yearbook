@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 $system_info = php_uname();
 

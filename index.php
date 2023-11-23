@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 $availableRoutes = ['homepage', 'login', 'logout', 'yearbook', 'register','new-yearbook', 'delate-yearbook'];
 

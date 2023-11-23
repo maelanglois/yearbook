@@ -14,7 +14,7 @@
 <body>
     <header>
         <?php
-        if (isset($_SESSION['user_id'])) {
+        if ($_SESSION['status']==='connected') {
         ?>
             <nav>
                 <div class="nav">
@@ -24,8 +24,8 @@
                         <a href="?page=logout" title="logout" class="nav-link">logout</a> </span>
                 </div>  
             </nav>
-            <?php }
-            else { ?>
+        <?php }
+        else { ?>
             <nav>
                 <div class="nav">
                     <a href="?page=homepage" title="homepage" class="nav-link">home</a>
