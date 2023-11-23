@@ -1,7 +1,14 @@
 <?php
 require '../root/connection.php';
-?>
 
+$response = $bdd->query('select * FROM students WHERE id = '.$_GET['userId']);
+$data = $response->fetch();
+
+if(!$data) {
+    header('Location : ?page=homepage');
+}
+var_dump($data);
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -12,7 +19,7 @@ require '../root/connection.php';
 </head>
 <body>
     <form>
-        Nom : <?php $_GET['name'] = ''; ?>
+        Nom : <?= $_GET['name'] ?>
         Prénom : <?php $_GET['firstname'] = ''; ?>
         E-mail : <?php $_GET['email'] = ''; ?>
         Mot de passe : <?php $_GET['password'] = ''; ?>
