@@ -6,7 +6,7 @@
         foreach($datas as $data) {?>
         <div>
         <a href="#"><div class="homepage-year-contain">
-            <div class="homepage-grayscale"><img src="images/<?= $data['image']?>" class="homepage-year-img"></div>
+            <div class="homepage-grayscale"><img src="data:image/jpeg;base64,<?= base64_encode($data['image_content'])?>" class="homepage-year-img"></div>
                 <div class="homepage-year-title"><?= $data['start_period']?> - <?= $data['end_period']?></div>
             <div class="homepage-year-number">XX étudiants</div>
         </div></a>
