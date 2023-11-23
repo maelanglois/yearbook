@@ -13,6 +13,8 @@ a{
     --text: #454545;
     --vert : #6ccc9a;
     --vert-f : #56b081;
+    --red : #c75454;
+    --red-f : #a34040;
     --card-bg : #F4F4F4;
     --grey : #d6d6d6;
     --white : white;
@@ -176,4 +178,144 @@ a{
     background-color: var(--vert);
     color: var(--white);
     transition: 0.3s;
+}
+
+/* yearbook */
+
+.yearbook-main-title{
+    text-align: center;
+    width: auto;
+    margin: auto;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 20px;
+    color: var(--vert);
+}
+
+.yearbook-filters-display{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.yearbook-sort{
+    background-color: var(--card-bg);
+    font-size: 0.6em;
+    padding: 5px;
+}
+
+.yearbook-display{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.yearbook-card{
+    width: 100%;
+    background-color: var(--card-bg);
+    border-radius: 3px;
+    padding-bottom: 5px;
+}
+
+.yearbook-img-contain{
+    width: 100%;
+    height: 150px;
+    color: black;
+    filter: grayscale(1);
+    transition: 0.5s;
+}
+
+.yearbook-img{
+    border-radius: 3px 3px 0px 0px;
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.yearbook-img-contain:hover{
+    filter: grayscale(0);
+    transition: 0.5s;
+}
+
+.yearbook-title{
+    margin: 8px 5px;
+    font-size: 1.2em;
+}
+
+.yearbook-infos-display{
+    display: flex;
+    justify-content: space-between;
+}
+
+.yearbook-infos{
+    font-size: 0.6em;
+    margin: 5px;
+}
+
+.yearbook-like-margin{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    align-self: flex-end;
+    margin: 5px 10px;
+}
+
+.yearbook-like{
+    width: 20px;
+    height: 20px;
+    transition: 0.3s;
+}
+
+.yearbook-like:hover{
+    color: var(--vert);
+    transition: 0.3s;
+}
+
+.yearbook-like-txt{
+    margin-left: 5px;
+    font-size: 0.7em;
+}
+
+.yearbook-modiadd{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.yearbook-delete{
+    background-color: var(--red);
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.6em;
+    transition: 0.3s;
+}
+
+.yearbook-delete:hover{
+    background-color: var(--red-f);
+    transition: 0.3s;
+}
+
+.yearbook-modify{
+    background-color: var(--vert);
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.6em;
+    transition: 0.3s;
+}
+
+.yearbook-modify:hover{
+    background-color: var(--vert-f);
+    transition: 0.3s;
+}
+
+.yearbook-mod-icon{
+    width: 1em;
+    height: 1em;
+    color: white;
+    margin-right: 3px;
 }
