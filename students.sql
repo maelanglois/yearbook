@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `students` (
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `firstname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `password` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `birthday` date NOT NULL,
   `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `promotion` varchar(16) COLLATE utf8mb4_unicode_ci NOT NULL
