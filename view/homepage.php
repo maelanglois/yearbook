@@ -1,14 +1,15 @@
 <div class="container">
+    <div class="yearbook-main-title">Yearbook</div>
+    <a href="" class="homepage-new-student">Ajouter un nouveau yearbook</a>
     <div class="homepage-year-display">
         <?php 
         foreach($datas as $data) {?>
-        <div class="homepage-year-contain">
+        <a href="#"><div class="homepage-year-contain">
             <div class="homepage-grayscale"><img src="images/<?= $data['image']?>" class="homepage-year-img"></div>
-                <a href="#" title=" année XXXX" class="homepage-year-title"><?= $data['start_period']?> - <?= $data['end_period']?></a>
+                <div class="homepage-year-title"><?= $data['start_period']?> - <?= $data['end_period']?></div>
             <div class="homepage-year-number">XX étudiants</div>
-        </div>
+        </div></a>
         <?php } ?>
-        <a href="#" class="homepage-add-align" title="Ajouter un yearbook"><ion-icon name="add-circle-outline" class="homepage-add"></ion-icon></a>
     </div>
 </div>
 

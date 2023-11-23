@@ -11,16 +11,16 @@ a{
 }
 
 :root{
-    --text: #454545;
+    --text: #f5f5f5;
     --vert : #6ccc9a;
     --vert-f : #56b081;
     --red : #c75454;
     --red-f : #a34040;
     --orange : #e68250;
     --orange-f : #c76e41;
-    --card-bg : #F4F4F4;
+    --card-bg : #292929;
     --grey : #d6d6d6;
-    --white : white;
+    --white : #474747;
 }
 
 /* homepage */
@@ -102,7 +102,7 @@ a{
     width: 168px;
     margin: auto;
     background-color: var(--vert);
-    color: var(--white);
+    color: var(--text);
     text-transform: uppercase;
     padding: 5px;
     border-radius: 3px;
@@ -128,7 +128,7 @@ a{
 
 .nav-link{
     text-decoration: none;
-    color: black;
+    color: var(--text);
     transition: 0.3s;
 }
 
@@ -307,7 +307,7 @@ a{
 
 .yearbook-delete{
     background-color: var(--red);
-    color: var(--white);
+    color: var(--text);
     text-transform: uppercase;
     padding: 5px;
     border-radius: 3px;
@@ -322,7 +322,7 @@ a{
 
 .yearbook-modify{
     background-color: var(--orange);
-    color: var(--white);
+    color: var(--text);
     text-transform: uppercase;
     padding: 5px;
     border-radius: 3px;
@@ -338,7 +338,7 @@ a{
 .yearbook-mod-icon{
     width: 1em;
     height: 1em;
-    color: white;
+    color: var(--text);
     margin-right: 3px;
 }
 
@@ -347,7 +347,7 @@ a{
     width: 95px;
     margin: 10px auto;
     background-color: var(--vert);
-    color: var(--white);
+    color: var(--text);
     text-transform: uppercase;
     padding: 5px;
     border-radius: 3px;
