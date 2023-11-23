@@ -22,6 +22,7 @@
                 <div class="homepage-year-title">année 2022 - 2023</div>
                 <div class="homepage-year-number">XX étudiants</div>
             </div>
+            
         </div>
     </div>
 </body>
