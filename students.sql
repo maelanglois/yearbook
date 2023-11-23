@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 23 nov. 2023 à 09:14
+-- Généré le : jeu. 23 nov. 2023 à 09:48
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.1.13
 
@@ -36,9 +36,27 @@ CREATE TABLE IF NOT EXISTS `students` (
   `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `birthday` date NOT NULL,
   `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `promotion` varchar(16) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `promotion_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `students_promotion_id_foreign` (`promotion_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Déchargement des données de la table `students`
+--
+
+INSERT INTO `students` (`id`, `name`, `firstname`, `email`, `password`, `birthday`, `avatar`, `promotion_id`) VALUES
+(1, 'student_name', 'student_firstname', 'student@student.com', 'studentpassword', '2023-11-23', 'student.png', 1);
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `students`
+--
+ALTER TABLE `students`
+  ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`promotion_id`) REFERENCES `promotions` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
