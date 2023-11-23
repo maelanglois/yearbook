@@ -19,7 +19,9 @@
             <nav>
                 <div class="nav">
                     <a href="?page=homepage" title="homepage" class="nav-link">home</a>
-                    <a href="?page=logout" title="logout" class="nav-link">logout</a> 
+                    <span>
+                        <ion-icon name="sunny-outline" class="nav-icon"></ion-icon>
+                        <a href="?page=logout" title="logout" class="nav-link">logout</a> </span>
                 </div>  
             </nav>
             <?php }
@@ -27,7 +29,8 @@
             <nav>
                 <div class="nav">
                     <a href="?page=homepage" title="homepage" class="nav-link">home</a>
-                    <span>
+                    <span class="link-display">
+                     <ion-icon name="sunny-outline" class="nav-icon"></ion-icon>
                         <a href="?page=login" title="login" class="nav-link">login</a> 
                     </span>
                 </div>   
