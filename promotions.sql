@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 23 nov. 2023 à 09:48
+-- Généré le : jeu. 23 nov. 2023 à 10:46
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.1.13
 
@@ -32,6 +32,7 @@ CREATE TABLE IF NOT EXISTS `promotions` (
   `id` int NOT NULL,
   `name` varchar(50) NOT NULL,
   `period` date NOT NULL,
+  `image` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -39,8 +40,8 @@ CREATE TABLE IF NOT EXISTS `promotions` (
 -- Déchargement des données de la table `promotions`
 --
 
-INSERT INTO `promotions` (`id`, `name`, `period`) VALUES
-(1, 'test-promotion', '2023-11-23');
+INSERT INTO `promotions` (`id`, `name`, `period`, `image`) VALUES
+(1, 'test-promotion', '2023-11-23', '');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
