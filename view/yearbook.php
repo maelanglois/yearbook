@@ -13,12 +13,13 @@
     <div class="yearbook-display">
         <div class="yearbook-card">
             <div class="yearbook-img-contain"><img src="images/avatar01.jpg" alt="<?= $data['name'], $data['firstname']?>" class="yearbook-img"></div>
-            <div class="yearbook-title"><?=$data['name'], $data['firstname']?></div>
+            <div class="yearbook-title"><?=$data['name'], " ", $data['firstname']?></div>
 
             <div class="yearbook-infos-display">
                 <span><div class="yearbook-infos"><?=$data['email']?></div>
                 <div class="yearbook-infos"><?=$data['birthday']?></div></span>
-                <span class="yearbook-like-margin"><ion-icon name="heart-outline" class="yearbook-like"></ion-icon><span class="yearbook-like-txt">0 j'aime(s)</span></span>
+                <span class="yearbook-like-margin">
+                    <ion-icon name="heart-outline" class="yearbook-like"></ion-icon><span class="yearbook-like-txt"><?=$data['aime'] ?> j'aime(s)</span></span>
             </div>
         </div>
         <div class="yearbook-modiadd">
