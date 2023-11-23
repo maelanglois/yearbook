@@ -1,0 +1,16 @@
+<?php
+require dirname(__DIR__) . '/root/connection.php';
+
+$query = "SELECT * FROM promotions WHERE id=:id";
+$response = $bdd->prepare($query);
+$response->execute(['id' => $_GET['id']]);
+$data = $response->fetch();
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $deleteQuery = "DELETE FROM promotions WHERE id=:id";
+    $deleteResponse = $bdd->prepare($deleteQuery);
+    if ($deleteResponse->execute(['id' => $_GET['id']])) {
+        header('location: ?page=homepage');
+        exit();
+    } 
+}
