@@ -1,7 +1,8 @@
 <?php
 
 
-require 'connection.php';
+require './root/connection.php';
+
  
 $query='SELECT * FROM students';
 
