@@ -87,7 +87,7 @@ body{
     transition: 0.3s;
 }
 
-/* login */
+/* login + register */
 
 .login-card{
     margin: 50px auto;
@@ -99,13 +99,15 @@ body{
 
 .login-display{
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    gap : 10px;
 }
 
 .login-int-display{
     display: flex;
     flex-direction: column;
-    width: 35%;
+    width: 100%;
 }
 
 .login-title{
@@ -123,6 +125,9 @@ body{
 }
 
 .login-submit{
+    display:inline-block;
+    align-self: center;
+    margin: 10px auto;
     width: 25%;
     text-align: center;
     border: 1px solid var(--vert);
