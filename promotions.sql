@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `promotions`;
 CREATE TABLE IF NOT EXISTS `promotions` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(50) NOT NULL,
   `period` date NOT NULL,
   PRIMARY KEY (`id`)
