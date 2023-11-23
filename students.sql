@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : jeu. 23 nov. 2023 à 08:35
+-- Généré le : jeu. 23 nov. 2023 à 09:48
 -- Version du serveur : 8.0.31
 -- Version de PHP : 8.1.13
 
@@ -29,24 +29,34 @@ SET time_zone = "+00:00";
 
 DROP TABLE IF EXISTS `students`;
 CREATE TABLE IF NOT EXISTS `students` (
-  `id` int NOT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `firstname` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `birthday` date NOT NULL,
-  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
-  `id_promotion` int NOT NULL,
-  UNIQUE KEY `yearbook_students_id_foreign` (`id`),
-  KEY `id_promotion` (`id_promotion`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+  `avatar` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `promotion_id` int NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `students_promotion_id_foreign` (`promotion_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `students`
 --
 
-INSERT INTO `students` (`id`, `name`, `firstname`, `email`, `password`, `birthday`, `avatar`, `id_promotion`) VALUES
-(1, 'test-name', 'test-firstname', 'test@test.com', 'test-password', '2000-01-01', '', 0);
+INSERT INTO `students` (`id`, `name`, `firstname`, `email`, `password`, `birthday`, `avatar`, `promotion_id`) VALUES
+(1, 'student_name', 'student_firstname', 'student@student.com', 'studentpassword', '2023-11-23', 'student.png', 1);
+
+--
+-- Contraintes pour les tables déchargées
+--
+
+--
+-- Contraintes pour la table `students`
+--
+ALTER TABLE `students`
+  ADD CONSTRAINT `students_ibfk_1` FOREIGN KEY (`promotion_id`) REFERENCES `promotions` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
