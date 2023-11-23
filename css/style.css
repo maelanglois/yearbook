@@ -4,9 +4,15 @@ body{
     color: var(--text);
 }
 
+a{
+    text-decoration: none;
+    color: none;
+}
+
 :root{
     --text: #454545;
     --vert : #6ccc9a;
+    --vert-f : #56b081;
     --card-bg : #F4F4F4;
     --grey : #d6d6d6;
     --white : white;
@@ -36,6 +42,8 @@ body{
 }
 
 .homepage-grayscale{
+    width: 300px;
+    object-fit: contain;
     color: black;
     filter: grayscale(1);
     transition: 0.5s;
@@ -49,17 +57,35 @@ body{
 .homepage-year-img{
     border-radius: 15px 15px 0px 0px;
     width: 300px;
+    margin-bottom: 10px;
 }
 
 .homepage-year-title{
     margin: 10px;
     font-size: 1em;
+    color: var(--text);
     text-transform: uppercase;
 }
 
 .homepage-year-number{
     font-size: 0.5em;
     margin: 10px;
+}
+
+.homepage-add{
+    width: 40px;
+    height: 40px;
+    color: var(--vert);
+    transition: 0.3s;
+}
+
+.homepage-add:hover{
+    color: var(--vert-f);
+    transition: 0.3s;
+}
+
+.homepage-add-align{
+    align-self: flex-end;
 }
 
 /* navbar */
