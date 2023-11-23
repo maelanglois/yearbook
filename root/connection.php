@@ -1,14 +1,29 @@
 <?php
 session_start();
 
-# CONNECTION BASE DE DONNÉE MAC
-$bdd = new PDO('mysql:host=localhost;dbname=yearbook;charset=utf8;port:8889','root', 'root');
+$system_info = php_uname();
 
-# CONNECTION BASE DE DONNÉE WINDOWS
+if (strpos($system_info, 'Windows') !== false) {
+    $dsn = 'mysql:host=localhost;dbname=yearbook;charset=utf8';
+    $username = 'root';
+    $password = '';
+} else {
+    $dsn = 'mysql:host=localhost;dbname=yearbook;charset=utf8;port=8889';
+    $username = 'root';
+    $password = 'root';
+}
 
-// $bdd = new PDO('mysql:host=localhost;dbname=yearbook;charset=utf8','root', '');
+try {
 
-$bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $bdd = new PDO($dsn, $username, $password);
 
-$bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $bdd->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
 
+    echo "Erreur de connexion : " . $e->getMessage();
+
+    exit();
+}
+
+?>
