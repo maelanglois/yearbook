@@ -15,6 +15,8 @@ a{
     --vert-f : #56b081;
     --red : #c75454;
     --red-f : #a34040;
+    --orange : #e68250;
+    --orange-f : #c76e41;
     --card-bg : #F4F4F4;
     --grey : #d6d6d6;
     --white : white;
@@ -299,7 +301,7 @@ a{
 }
 
 .yearbook-modify{
-    background-color: var(--vert);
+    background-color: var(--orange);
     color: var(--white);
     text-transform: uppercase;
     padding: 5px;
@@ -309,7 +311,7 @@ a{
 }
 
 .yearbook-modify:hover{
-    background-color: var(--vert-f);
+    background-color: var(--orange-f);
     transition: 0.3s;
 }
 
@@ -318,4 +320,24 @@ a{
     height: 1em;
     color: white;
     margin-right: 3px;
+}
+
+.yearbook-new-student{
+    display: flex;
+    width: 95px;
+    margin: 10px auto;
+    background-color: var(--vert);
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 0.6em;
+    transition: 0.3s;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.yearbook-new-student:hover{
+    background-color: var(--vert-f);
+    transition: 0.3s;
 }

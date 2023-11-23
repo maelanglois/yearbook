@@ -5,6 +5,7 @@
         <div class="yearbook-sort">Trier par date de naissance <ion-icon name="arrow-down-outline" class="yearbook-sort-icon"></ion-icon></div>
         <div class="yearbook-sort">Trier par j'aime <ion-icon name="arrow-down-outline" class="yearbook-sort-icon"></ion-icon></div>
     </div>
+    <a href="" class="yearbook-new-student">Ajouter un élève</a>
 </div>
 <div class="homepage-year-display">
     <?php
