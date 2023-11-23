@@ -1,6 +1,6 @@
 <?php
 
-$availableRoutes = ['homepage', 'login', 'logout'];
+$availableRoutes = ['homepage', 'login', 'logout', 'yearbook', 'register'];
 
 $route = 'homepage';
 
