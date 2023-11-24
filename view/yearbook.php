@@ -42,7 +42,7 @@
         </div>
         <div class="yearbook-modiadd">
         <?php if($_SESSION['role'] === 'admin') { ?>
-            <a href="" class="yearbook-delete"><ion-icon name="trash-outline" class="yearbook-mod-icon"></ion-icon>Supprimer</a>
+            <a href="?page=yearbook&id=<?= $data['id'] ?>" class="yearbook-delete"><ion-icon name="trash-outline" class="yearbook-mod-icon"></ion-icon>Supprimer</a>
         <?php };
          if($_SESSION['role'] === 'admin' || $_SESSION['id' ]=== $data['id']) { ?>
             <a href="?page=profile-edit&userId=<?= $data['id']?>" class="yearbook-modify"><ion-icon name="pencil-outline" class="yearbook-mod-icon"></ion-icon> Modifier</a>

@@ -24,5 +24,12 @@ $query='SELECT * FROM students WHERE promotion_id='.$id;
 $response = $bdd->query($query);
 $datas = $response->fetchAll();
 
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $id=$_GET['Id'];
+    $req = $bdd->prepare('DELETE FROM students WHERE promotion_id=:id');
+    $req->execute(array(':id'=> $id));
+    header('location: ?page=yearbook');
+
+}
+
 require dirname(__DIR__) . '/view/yearbook.php';
-//lucas
