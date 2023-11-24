@@ -266,7 +266,7 @@ a{
 
 .yearbook-img-contain{
     width: 100%;
-    height: 150px;
+    max-height: 150px;
     color: black;
     filter: grayscale(1);
     transition: 0.5s;
@@ -385,3 +385,32 @@ a{
     background-color: var(--vert-f);
     transition: 0.3s;
 }
+
+@media screen and (max-width: 767px){
+
+    .yearbook-display{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .homepage-year-display{
+        flex-direction: column;
+    }
+
+    .login-submit{
+        width: 100%;
+    }
+
+    .homepage-grayscale{
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 992px){
+    .yearbook-display{
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
