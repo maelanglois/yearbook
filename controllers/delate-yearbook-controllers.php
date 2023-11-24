@@ -1,16 +1,20 @@
 <?php
 require dirname(__DIR__) . '/root/connection.php';
 
-$query = "SELECT * FROM promotions WHERE id=:id";
-$response = $bdd->prepare($query);
-$response->execute(['id' => $_GET['id']]);
-$data = $response->fetch();
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $deleteQuery = "DELETE FROM promotions WHERE id=:id";
-    $deleteResponse = $bdd->prepare($deleteQuery);
-    if ($deleteResponse->execute(['id' => $_GET['id']])) {
-        header('location: ?page=homepage');
-        exit();
-    } 
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $id=$_POST['id'];
+    var_dump($id);
+    $_SESSION['sup']= $id;
+    var_dump($_SESSION['sup']);
+    if ($_POST['confirmation'] === 'OUI'){
+        $req = $bdd->prepare('DELETE FROM promotions WHERE id = :id');
+        $req->execute(array(
+            ':id'=> $_SESSION['sup']
+            ));
+            //header('location: ?page=homepage');
+    }
+
 }
+
+require dirname(__DIR__) . '/view/delate-yearbook.php';
