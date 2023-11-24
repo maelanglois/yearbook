@@ -7,7 +7,7 @@
                     <div class="login-int-display"><label for="name" class="login-label">Name</label>
                     <input type="text" placeholder="Enter name" name="name" class="login-input"></div>
                     <div class="login-int-display"><label for="firstname" class="login-label">Last name</label>
-                    <input type="text" placeholder="Enter lastname" name="lastname" class="login-input"></div>
+                    <input type="text" placeholder="Enter firstname" name="firstname" class="login-input"></div>
                     <div class="login-int-display"><label for="email" class="login-label">Email</label>
                     <input type="email" name="email" placeholder="Enter email" class="login-input"></div>
                     <div class="login-int-display"><label for="password" class="login-label">Password</label>
