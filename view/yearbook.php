@@ -1,9 +1,11 @@
 <div>
     <div class="yearbook-main-title"> Classe de l'année 2022-2023</div>
     <div class="yearbook-filters-display">
-        <div class="yearbook-sort">Trier par nom <ion-icon name="arrow-down-outline" class="yearbook-sort-icon"></ion-icon></div>
-        <div class="yearbook-sort">Trier par date de naissance <ion-icon name="arrow-down-outline" class="yearbook-sort-icon"></ion-icon></div>
-        <div class="yearbook-sort">Trier par j'aime <ion-icon name="arrow-down-outline" class="yearbook-sort-icon"></ion-icon></div>
+        <form method="POST">
+            <button class="yearbook-sort" name="name">Trier par nom <ion-icon name="arrow-down-outline" class="yearbook-sort-icon"></ion-icon></button>
+            <button class="yearbook-sort" name="birthdate">Trier par date de naissance <ion-icon name="arrow-down-outline" class="yearbook-sort-icon"></ion-icon></button>
+            <button class="yearbook-sort" name="aime">Trier par j'aime <ion-icon name="arrow-down-outline" class="yearbook-sort-icon"></ion-icon></button>
+        </form>
     </div>
     <a href="" class="yearbook-new-student">Ajouter un élève</a>
 </div>
