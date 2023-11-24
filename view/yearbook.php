@@ -23,7 +23,7 @@
     </div>
     <?php if(!empty($_SESSION)){
         if($_SESSION['role'] === 'admin') { ?>
-        <a href="" class="yearbook-new-student">Ajouter un élève</a>
+        <a href="?page=register" class="yearbook-new-student">Ajouter un élève</a>
     <?php }} ?>
 </div>
 <div class="homepage-year-display">
