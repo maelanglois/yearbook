@@ -17,6 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['id'] = $user['id'];
         $_SESSION['name'] = $user['name'];
         $_SESSION['firstname'] = $user['firstname'];
+        $_SESSION['role'] = $user['role'];
         header("Location: ?page=homepage");
         exit();
     } else {
