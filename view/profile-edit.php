@@ -1,34 +1,41 @@
 <?php 
 
-require '../root/connection.php';
 
-$response=$bdd->prepare("select * FROM students WHERE id=:id");
+
+$response=$bdd->prepare("SELECT * FROM students WHERE id=:id");
 $response->execute([":id"=> $_GET['userId']]);
 $user=$response->fetch();
 var_dump($user);
 
-$response = $bdd->prepare("UPDATE students SET name=:name WHERE id=:id");
-    $response->execute([
-        ":id" => $userId,
-        ":name" => $name
-    ]);
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+    $name = $_POST['name'];
+    $firstname = $_POST['firstname'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $birthday = $_POST['birthday'];
+    $avatar = $_POST['avatar'];
+
+
+
+    $updateQuery = "UPDATE students SET name=:name, firstname=:firstname, email=:email, birthday=:birthday, password=:password  WHERE id=:id";
+    $updateStatement = $bdd->prepare($updateQuery);
+    $updateStatement->execute([
+        'id' => $_GET['id'],
+        'name' => $name,
+        'firstname' => $firstname,
+        'email' => $email,
+        'birthday' => $birthday,
+        'password' => $password,
+    ]);
+}
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier le profil</title>
-</head>
-<body>
     <form method="POST" action="profile-edit.php?userId=<?php echo $user['id']; ?>">
         <input type="hidden" name="userId" value="<?php echo $user['id']; ?>">
         
         <label for="name">Nom :</label>
-        <input type="text" id="name" name="name" value="<?php echo $user['name']; ?>">
+        <input type="text" id="name" name="name" value="<?= $user['name'] ?>"<br>
         <button type="submit">Envoyer</button>
     </form>
-</body>
-</html>
