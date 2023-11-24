@@ -222,6 +222,8 @@ a{
 
 .yearbook-sort{
     background-color: var(--card-bg);
+    color: var(--text);
+    border: 0;
     font-size: 0.6em;
     padding: 5px;
 }
