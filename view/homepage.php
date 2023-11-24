@@ -5,7 +5,7 @@
         <?php 
         foreach($datas as $data) {?>
         <div>
-        <a href="#"><div class="homepage-year-contain">
+        <a href="?page=yearbook&id=<?= $data['id']?>"><div class="homepage-year-contain">
             <div class="homepage-grayscale"><img src="data:image/jpeg;base64,<?= base64_encode($data['image_content'])?>" class="homepage-year-img"></div>
                 <div class="homepage-year-title"><?= $data['promotion_year']?></div>
             <div class="homepage-year-number">XX étudiants</div>
