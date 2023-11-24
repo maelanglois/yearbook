@@ -1,13 +1,18 @@
-<?php
+<?php 
+
 require '../root/connection.php';
 
-$response = $bdd->query('select * FROM students WHERE id = '.$_GET['userId']);
-$data = $response->fetch();
+$response=$bdd->prepare("select * FROM students WHERE id=:id");
+$response->execute([":id"=> $_GET['userId']]);
+$user=$response->fetch();
+var_dump($user);
 
-if(!$data) {
-    header('Location : ?page=homepage');
-}
-var_dump($data);
+$response = $bdd->prepare("UPDATE students SET name=:name WHERE id=:id");
+    $response->execute([
+        ":id" => $userId,
+        ":name" => $name
+    ]);
+
 ?>
 
 <!DOCTYPE html>
@@ -18,15 +23,12 @@ var_dump($data);
     <title>Modifier le profil</title>
 </head>
 <body>
-    <form>
-        Nom : <?= $_GET['name'] ?>
-        Prénom : <?php $_GET['firstname'] = ''; ?>
-        E-mail : <?php $_GET['email'] = ''; ?>
-        Mot de passe : <?php $_GET['password'] = ''; ?>
-        Date de naissance : <?php $_GET['birthday'] = ''; ?>
-        Avatar : <?php $_GET['avatar'] = ''; ?>
-        Role : <?php $_GET['role'] = ''; ?>
-        Aime : <?php $_GET['aime'] = ''; ?>
+    <form method="POST" action="profile-edit.php?userId=<?php echo $user['id']; ?>">
+        <input type="hidden" name="userId" value="<?php echo $user['id']; ?>">
+        
+        <label for="name">Nom :</label>
+        <input type="text" id="name" name="name" value="<?php echo $user['name']; ?>">
+        <button type="submit">Envoyer</button>
     </form>
 </body>
 </html>
