@@ -33,13 +33,17 @@ a{
 .homepage-year-display{
     margin: 40px auto;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
     width: 80%;
     height: auto;
     padding: 20px;
+}
+
+.homepage-he-display{
+    display: flex;
+    flex-direction: column;
 }
 
 .homepage-year-contain{
