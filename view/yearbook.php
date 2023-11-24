@@ -2,10 +2,9 @@
     <div class="yearbook-main-title"> Classe de l'année 2022-2023</div>
     <div class="yearbook-filters-display">
         <form method="POST">
-            <?php if(!empty($_SESSION)){
-                if(isset($_POST["name"])){ ?>
+            <?php if(isset($_POST["name"])){ ?>
                 <button class="yearbook-sort" name="namerev">Trier par nom <ion-icon name="arrow-up-outline" class="yearbook-sort-icon"></ion-icon></button>
-            <?php }}
+            <?php }
             else{ ?>
                 <button class="yearbook-sort" name="name">Trier par nom <ion-icon name="arrow-down-outline" class="yearbook-sort-icon"></ion-icon></button>
             <?php };
