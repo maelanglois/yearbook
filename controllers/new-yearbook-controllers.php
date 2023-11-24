@@ -8,15 +8,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $name = $_POST['name'];
         $fileName = $_FILES['image']['name'];
         $imageData = file_get_contents($_FILES['image']['tmp_name']);
-        $startPeriod = $_POST['start_period'];
-        $endPeriod = $_POST['end_period'];
+        $promotion_year = $_POST['promotion_year'];
 
-        $stmt = $bdd->prepare("INSERT INTO promotions (name, image, image_content, start_period, end_period) VALUES (?, ?, ?, ?, ?)");
+        $stmt = $bdd->prepare("INSERT INTO promotions (name, image, image_content, promotion_year) VALUES (?, ?, ?, ?)");
         $stmt->bindParam(1, $name, PDO::PARAM_STR);
         $stmt->bindParam(2, $fileName, PDO::PARAM_STR);
         $stmt->bindParam(3, $imageData, PDO::PARAM_LOB);
-        $stmt->bindParam(4, $startPeriod, PDO::PARAM_INT);
-        $stmt->bindParam(5, $endPeriod, PDO::PARAM_INT);
+        $stmt->bindParam(4, $promotion_year, PDO::PARAM_STR);
         
         if ($stmt->execute()) {
             header("Location: ?page=homepage");
