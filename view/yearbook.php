@@ -21,7 +21,9 @@
             <?php }; ?>
         </form>
     </div>
-    <a href="" class="yearbook-new-student">Ajouter un élève</a>
+    <?php if($_SESSION['role'] === 'admin') { ?>
+        <a href="" class="yearbook-new-student">Ajouter un élève</a>
+    <?php } ?>
 </div>
 <div class="homepage-year-display">
     <?php
