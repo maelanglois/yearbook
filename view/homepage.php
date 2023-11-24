@@ -11,10 +11,8 @@
             <div class="homepage-year-number">XX étudiants</div>
         </div></a>
         <div class="yearbook-modiadd">
-            <form method="POST" action="?page=delate-yearbook">
-                <input name="id" value="<?= $data['id']?>"hidden></input>
-                <button type="submit" name="submit" class="yearbook-delete"><ion-icon name="trash-outline" class="yearbook-mod-icon"></ion-icon>Supprimer</button>
-            </form>
+            <a href="?page=delate-yearbook&userId=<?= $data['id']?>"  class="yearbook-delete"><ion-icon name="trash-outline" class="yearbook-mod-icon"></ion-icon>delete</a>
+            
         </div>
         </div>
         <?php } ?>
