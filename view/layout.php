@@ -13,7 +13,7 @@
 </head>
 <body>
     <header>
-        <?php
+        <?php if(!empty($_SESSION)){
         if ($_SESSION['status']==='connected') {
         ?>
             <nav>
@@ -24,20 +24,26 @@
                         <?php if(isset($_POST["nightmode"])){ ?>
                             <button type="submit" class="nav-icon" name="lightmode"><ion-icon name="moon-outline"></ion-icon></button>
                         <?php } else {?> 
-                            <button type="submit" class="nav-icon" name="nightmode"><ion-icon name="sunny-outline"></ion-icon></button><?php 
+                            <button type="submit" class="nav-icon" name="nightmode"><ion-icon name="sunny-outline"></button><?php 
                         }?>
                         </form>
                         <a href="?page=logout" title="logout" class="nav-link">logout</a> 
                     </span>
                 </div>  
             </nav>
-        <?php }
+        <?php }}
         else { ?>
             <nav>
                 <div class="nav">
                     <a href="?page=homepage" title="homepage" class="nav-link">home</a>
                     <span class="link-display">
-                     <ion-icon name="sunny-outline" class="nav-icon"></ion-icon>
+                    <form method="POST">
+                        <?php if(isset($_POST["nightmode"])){ ?>
+                            <button type="submit" class="nav-icon" name="lightmode"><ion-icon name="moon-outline"></ion-icon></button>
+                        <?php } else {?> 
+                            <button type="submit" class="nav-icon" name="nightmode"><ion-icon name="sunny-outline"></button><?php 
+                        }?>
+                        </form>
                         <a href="?page=login" title="login" class="nav-link">login</a> 
                     </span>
                 </div>   
